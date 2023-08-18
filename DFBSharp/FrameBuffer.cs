@@ -49,5 +49,10 @@ namespace DFBSharp
         {
             Native.DrawBitmap(fb, x1, y1, x2, y2, bitmap);
         }
+
+        public void DrawFullBitmap(IntPtr bitmap)
+        {
+            Native.DrawFullBitmap(fb, bitmap);
+        }
     }
 }
