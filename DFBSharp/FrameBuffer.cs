@@ -50,6 +50,12 @@ namespace DFBSharp
             Native.DrawBitmap(fb, x1, y1, x2, y2, bitmap);
         }
 
+        [Obsolete("Use DrawBitmap(IntPtr) instead.")]
+        public void DrawFullBitmap(IntPtr bitmap)
+        {
+            Native.DrawFullBitmap(fb, bitmap);
+        }
+
         public void DrawBitmap(IntPtr bitmap)
         {
             Native.DrawFullBitmap(fb, bitmap);

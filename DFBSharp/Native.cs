@@ -31,6 +31,9 @@ namespace DFBSharp
         [DllImport("libdfb")]
         public static extern void DrawFullBitmap(IntPtr handle, IntPtr bitmap);
         [DllImport("libdfb")]
+        public static extern void DrawFullBitmap(IntPtr handle, IntPtr bitmap);
+
+        [DllImport("libdfb")]
         public static extern UInt32 GetBitsPerPixel(IntPtr ptr);
 
         [DllImport("libdfb")]

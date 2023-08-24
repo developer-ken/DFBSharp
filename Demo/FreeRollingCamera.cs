@@ -17,7 +17,7 @@ namespace Demo
         public double RollingRate { get; private set; }
         private int frames;
 
-        public FreeRollingCamera(int dev, bool fpscounter = false)
+        public FreeRollingCamera(string dev, bool fpscounter = false)
         {
             count_fps = fpscounter;
             vcap = new VideoCapture(dev);
@@ -81,7 +81,7 @@ namespace Demo
         public MatInPool GetFrame(double exposure = -5)
         {
             onCap.Reset();
-            vcap.Exposure = exposure;
+            //vcap.Exposure = exposure;
             onCap.WaitOne();
             return MatPool.Default.EnPool(latestframe);
         }
